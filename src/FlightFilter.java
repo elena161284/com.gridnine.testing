@@ -45,5 +45,4 @@ public class FlightFilter {
         }
         return new Flight(segments);
     }
-
 }

@@ -7,7 +7,7 @@ import java.util.List;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        List<Flight>fli=FlightFilter.createFlights();
+        List<Flight> fli = FlightFilter.createFlights();
         Filter fil = new FilterImplementation();
 
         System.out.println("перелет до текущего момента времени");

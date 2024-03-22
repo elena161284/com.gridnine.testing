@@ -15,3 +15,6 @@ public interface Filter {
     //метод: вывод всех сегментов
     void allFlightsFromTheList(List<Flight> fli);
 }
+
+
+
