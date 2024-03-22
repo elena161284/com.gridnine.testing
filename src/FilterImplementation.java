@@ -24,13 +24,13 @@ public class FilterImplementation implements Filter {
 
     @Override
     public List<Flight> theIntervalBetweenArrivalAndDepartureExceeds2Hours(List<Flight> fli) {
-        List<Flight> twoHours= new ArrayList<>();
+        List<Flight> twoHours = new ArrayList<>();
         for (Flight flight : fli) {
-            List<Segment>segments=flight.getSegments();
-            for (int i=0; i<segments.size()-1;i++) {
-                LocalDateTime depTime=segments.get(i+1).getDepartureDate();
-                LocalDateTime arrTime=segments.get(i).getArrivalDate();
-                if(depTime.isAfter(arrTime.plusHours(2)));
+            List<Segment> segments = flight.getSegments();
+            for (int i = 0; i < segments.size() - 1; i++) {
+                LocalDateTime depTime = segments.get(i + 1).getDepartureDate();
+                LocalDateTime arrTime = segments.get(i).getArrivalDate();
+                if (depTime.isAfter(arrTime.plusHours(2))) ;
                 twoHours.add(flight);
             }
         }
@@ -43,3 +43,4 @@ public class FilterImplementation implements Filter {
         System.out.println(fli);
     }
 }
+
